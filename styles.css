@@ -1,0 +1,382 @@
+/* ============================
+   FONT SYSTEM
+============================ */
+.display-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.title-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.subtitle-text {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.body-large {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.body-strong {
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body, p {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================
+   COLOR SYSTEM
+============================ */
+:root {
+  --brisk-blue: #17253F;
+  --intensity-indigo: #2343BD;
+  --aqua-pulse: #91B9D2;
+  --lime-lift: #DEF479;
+  --endurance-white: #FCFCFC;
+  --detritus-green: #519C4F;
+  --footer-hover: #2343BD; /* For homepage product hover */
+}
+
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+  margin: 0;
+  background-color: var(--endurance-white);
+  color: var(--detritus-green);
+}
+
+header, footer {
+  background-color: var(--aqua-pulse);
+  padding: 15px;
+}
+
+/* Layout */
+.header-container, .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.header-nav {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--brisk-blue);
+}
+
+.header-nav a:hover {
+  color: var(--lime-lift);
+}
+
+/* ============================
+   HEADINGS
+============================ */
+h1 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--brisk-blue);
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--intensity-indigo);
+}
+
+h3 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--brisk-blue);
+}
+
+/* ============================
+   MAIN CONTENT
+============================ */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Homepage Promo Heading */
+.promo-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--intensity-indigo);
+  margin-bottom: 15px;
+}
+
+/* About page content aligned left */
+.about-intro-left {
+  text-align: left;
+  font-size: 18px;
+  margin: 15px 0 25px 0;
+  line-height: 1.6;
+}
+
+
+/* ============================
+   PRODUCT BUTTONS
+============================ */
+.product-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.product-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--intensity-indigo);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: var(--footer-hover);
+  color: white;
+}
+
+/* ============================
+   TABLE STYLES
+============================ */
+.hours-table, .gallery-table {
+  width: 80%;
+  max-width: 900px;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.hours-table th, 
+.hours-table td,
+.gallery-table td {
+  border: 1px solid var(--brisk-blue);
+  padding: 10px;
+  text-align: center;
+}
+
+.hours-table th {
+  background-color: var(--intensity-indigo);
+  color: white;
+}
+
+/* ============================
+   FORMS
+============================ */
+form {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Two-column layout for form rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--intensity-indigo);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Buttons */
+form button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--intensity-indigo);
+  color: white;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--lime-lift);
+  color: var(--brisk-blue);
+}
+
+.clear-btn {
+  background-color: #777;
+}
+
+.clear-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive: single column for mobile */
+@media (max-width: 700px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============================
+   BUTTONS
+============================ */
+button {
+  background-color: var(--intensity-indigo);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--lime-lift);
+  color: var(--brisk-blue);
+}
+
+.clear-btn {
+  background-color: #777777;
+}
+
+.clear-btn:hover {
+  background-color: #555555;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.social-links a,
+.footer-nav a {
+  margin: 0 8px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--brisk-blue);
+}
+
+.social-links a:hover,
+.footer-nav a:hover {
+  color: var(--lime-lift);
+}
+
+/* ============================
+   GALLERY
+============================ */
+.gallery-table td {
+  background-color: white;
+}
+
+.gallery-table img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.view-cart-btn {
+  margin-bottom: 15px;
+  float: right;
+}
+
+/* ============================
+   MODAL
+============================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 37, 63, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--intensity-indigo);
+}
+
+/* ============================
+   HOMEPAGE IMAGE
+============================ */
+.homepage-image {
+  max-width: 75%;
+  height: auto;
+  margin-bottom: 20px;
+}
